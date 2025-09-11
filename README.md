@@ -120,7 +120,7 @@ AI-Volatility-Predictor-A-Financial-Risk-Analytics-Dashboard/
 │── app.py                  # Streamlit interactive dashboard
 │── volatility_model.joblib # Saved ML model
 │── README.md               # Project overview
-|── Tarin.ipynb
+|── Tarin.ipynb             # Model Training and Evaluating 
 ```
 
 ---
