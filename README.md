@@ -12,16 +12,18 @@ The solution uses **historical market data** to train a machine learning model, 
 ###  Core Components
 - **Data Engineering** → Sourcing, cleaning, and transforming raw financial data  
 - **Machine Learning** → Training a robust regression model to make predictions  
-- **Model Validation** → Proving the model's reliability with professional-grade evaluation techniques  
+- **Model Validation & Backtesting** → Proving the model's reliability with rigorous evaluation across multiple time periods  
 - **Deployment** → Creating an interactive dashboard to make the model accessible to anyone  
 
 ---
 
-##  Key Features
--  **Real-time Predictions** → Instant volatility forecast for any stock by entering its ticker symbol  
--  **Interactive Dashboard** → Built with **Streamlit**, visualizing historical price movements, volatility trends, and clear risk assessments  
--  **Advanced Methodology** → Uses **XGBoost**, hyperparameter tuning, and a rigorous backtesting strategy  
--  **Model Transparency** → Displays the most important features influencing the model’s predictions  
+###  Key Features
+- **Real-time Predictions** → Instant volatility forecast for any stock by entering its ticker symbol  
+- **Interactive Dashboard** → Built with Streamlit, visualizing historical price movements, volatility trends, and clear risk assessments  
+- **Advanced Methodology** → Uses **XGBoost**, hyperparameter tuning, and a rigorous backtesting strategy  
+- **Model Transparency** → Displays the most important features influencing the model’s predictions  
+- **Walk-Forward Backtesting** → Validates the model over multiple rolling time windows to simulate real-world performance  
+ 
 
 ---
 
