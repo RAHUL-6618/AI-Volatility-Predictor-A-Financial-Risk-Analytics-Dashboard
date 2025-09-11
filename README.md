@@ -5,7 +5,7 @@ It showcases a **full-stack data science workflow**, from data acquisition and r
 
 ---
 
-## 📌 Overview
+## Overview
 The goal of this project is to provide a reliable forecast of a stock's **short-term volatility**, a key measure of risk for investors and analysts.  
 The solution uses **historical market data** to train a machine learning model, which is then served through a **user-friendly web interface**.
 
@@ -17,7 +17,7 @@ The solution uses **historical market data** to train a machine learning model, 
 
 ---
 
-## 🚀 Key Features
+## Key Features
 - **Real-time Predictions**: Get an instant volatility forecast for any stock by simply entering its ticker symbol.  
 - **Interactive Dashboard**: Built with Streamlit, the app visualizes historical price movements, volatility trends, and a clear risk assessment.  
 - **Advanced Methodology**: The model uses techniques like **XGBoost**, **hyperparameter tuning**, and a **rigorous backtesting strategy**.  
@@ -25,7 +25,7 @@ The solution uses **historical market data** to train a machine learning model, 
 
 ---
 
-## 📊 Methodology & Mathematical Concepts
+## Methodology & Mathematical Concepts
 
 This project's model works by identifying patterns in historical data.  
 We engineered several features based on **financial and mathematical concepts**.
@@ -82,9 +82,37 @@ Our model achieved:
 \[
 R^2 = 0.9471
 \]  
-➡️ Explains **94% of the volatility**.
+➡Explains **94% of the volatility**.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
+AI-Volatility-Predictor-A-Financial-Risk-Analytics-Dashboard/
+│── app.py # Streamlit interactive dashboard
+│── volatility_model.joblib # Saved ML model
+│── README.md # Project overview
 
+
+
+---
+
+##  How to Run the App
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/RAHUL-6618/AI-Volatility-Predictor-A-Financial-Risk-Analytics-Dashboard.git
+cd AI-Volatility-Predictor-A-Financial-Risk-Analytics-Dashboard
+
+### 2. Install Dependencies
+
+Make sure you have Python 3.8+ installed. Then, install dependencies:
+'''bash
+pip install pandas yfinance joblib numpy scikit-learn xgboost streamlit matplotlib seaborn
+
+Ensure volatility_model.joblib is in the same directory.
+### 3. Run the App
+'''bash
+streamlit run app.py
+
+
+Your browser will automatically open the dashboard.
