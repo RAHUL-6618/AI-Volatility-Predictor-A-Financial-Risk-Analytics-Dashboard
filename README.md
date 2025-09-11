@@ -1,107 +1,90 @@
-# AI-Volatility-Predictor-A-Financial-Risk-Analytics-Dashboard
-This project is a comprehensive data science solution that predicts the future volatility of financial assets. It showcases a full-stack data science workflow, from data acquisition and rigorous model building to deployment in an interactive web application.
+# AI Volatility Predictor: A Financial Risk Analytics Dashboard
 
-Overview
-The goal of this project is to provide a reliable forecast of a stock's short-term volatility, a key measure of risk for investors and analysts. The solution uses historical market data to train a machine learning model, which is then served through a user-friendly web interface.
+This project is a comprehensive data science solution that predicts the **future volatility of financial assets**.  
+It showcases a **full-stack data science workflow**, from data acquisition and rigorous model building to deployment in an interactive web application.
 
-The core components of this project are:
+---
 
-Data Engineering: Sourcing, cleaning, and transforming raw financial data.
+## 📌 Overview
+The goal of this project is to provide a reliable forecast of a stock's **short-term volatility**, a key measure of risk for investors and analysts.  
+The solution uses **historical market data** to train a machine learning model, which is then served through a **user-friendly web interface**.
 
-Machine Learning: Training a robust regression model to make predictions.
+### Core Components
+- **Data Engineering**: Sourcing, cleaning, and transforming raw financial data.  
+- **Machine Learning**: Training a robust regression model to make predictions.  
+- **Model Validation**: Proving the model's reliability with professional-grade evaluation techniques.  
+- **Deployment**: Creating an interactive dashboard to make the model accessible to anyone.  
 
-Model Validation: Proving the model's reliability with professional-grade evaluation techniques.
+---
 
-Deployment: Creating an interactive dashboard to make the model accessible to anyone.
+## 🚀 Key Features
+- **Real-time Predictions**: Get an instant volatility forecast for any stock by simply entering its ticker symbol.  
+- **Interactive Dashboard**: Built with Streamlit, the app visualizes historical price movements, volatility trends, and a clear risk assessment.  
+- **Advanced Methodology**: The model uses techniques like **XGBoost**, **hyperparameter tuning**, and a **rigorous backtesting strategy**.  
+- **Model Transparency**: Displays the most important features influencing the model's predictions.  
 
-Key Features
-Real-time Predictions: Get an instant volatility forecast for any stock by simply entering its ticker symbol.
+---
 
-Interactive Dashboard: Built with Streamlit, the app visualizes historical price movements, volatility trends, and a clear risk assessment.
+## 📊 Methodology & Mathematical Concepts
 
-Advanced Methodology: The model is based on advanced techniques like XGBoost, hyperparameter tuning, and a rigorous backtesting strategy.
+This project's model works by identifying patterns in historical data.  
+We engineered several features based on **financial and mathematical concepts**.
 
-Model Transparency: The app displays the most important features that influence the model's predictions, providing insight into its decision-making process.
+### 1. Logarithmic Returns
+We calculated the daily log returns \( r_t \):
 
-Methodology & Mathematical Concepts
-This project's model works by identifying patterns in historical data. We engineered several features based on financial and mathematical concepts.
+\[
+r_t = \ln \left(\frac{P_t}{P_{t-1}}\right)
+\]
 
-Logarithmic Returns: We calculated the daily log returns (r_t) of a stock, which are often used in finance because they are additive over time and have better statistical properties than simple returns.
-r_t=
-ln(
-fracP_tP_t−1)
-where P_t is the price on day t.
+Where:
+- \( P_t \) = Price on day *t*
 
-Historical Volatility: Our target variable for prediction is the annualized historical volatility (
-sigma_P). This is a key measure of risk and is calculated as the standard deviation of the daily log returns over a 21-day rolling window, annualized by scaling with the square root of 252 (the approximate number of trading days in a year).
-sigma_P=
-sqrtfrac1n−1sum_i=1 
-n
- (r_i−barr) 
-2
- 
-times
-sqrt252
-where n=21 is the number of days, and 
-barr is the mean daily log return.
+---
 
-Relative Strength Index (RSI): This momentum oscillator is a technical indicator used in the model to measure the speed and change of price movements.
-RSI=100−
-frac1001+RS
-where RS=
-fracAverageGainAverageLoss
+### 2. Historical Volatility
+Our target variable is **annualized historical volatility** \( \sigma_P \):
 
-Model Performance: We evaluated our model using the R-squared (R 
-2
- ) score, which measures the proportion of the variance in the target variable that is predictable from the features. An R-squared of 0.9471 indicates our model can explain over 94% of the volatility.
-R 
-2
- =1−
-fracsum_i(y_i−haty∗i) 
-2
- sum∗i(y_i−bary) 
-2
- 
+\[
+\sigma_P = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (r_i - \bar{r})^2} \times \sqrt{252}
+\]
 
-Project Structure
-This repository contains the following files and directories:
+Where:
+- \( n = 21 \) (rolling window in days)  
+- \( \bar{r} \) = Mean daily log return  
+- 252 ≈ trading days in a year  
 
-app.py: The Python script for the interactive Streamlit web dashboard.
+---
 
-volatility_model.joblib: The saved machine learning model.
+### 3. Relative Strength Index (RSI)
+Momentum oscillator used to measure speed & change of price movements:
 
-README.md: This file, which provides an overview of the project.
+\[
+RSI = 100 - \frac{100}{1 + RS}
+\]
 
-How to Run the App
-To run the AI Volatility Predictor on your local machine, follow these simple steps:
+Where:
 
-Clone the Repository
+\[
+RS = \frac{\text{Average Gain}}{\text{Average Loss}}
+\]
 
-Bash
+---
 
-git clone https://github.com/RAHUL-6618/AI-Volatility-Predictor-A-Financial-Risk-Analytics-Dashboard.git
-cd AI-Volatility-Predictor-A-Financial-Risk-Analytics-Dashboard
-Install Dependencies
-First, ensure you have Python 3.8 or newer installed. Then, install the required libraries:
+### 4. Model Performance
+We evaluated the model using **R-squared (\(R^2\))**:
 
-Bash
+\[
+R^2 = 1 - \frac{\sum_i (y_i - \hat{y}_i)^2}{\sum_i (y_i - \bar{y})^2}
+\]
 
-pip install pandas yfinance joblib numpy scikit-learn xgboost streamlit matplotlib seaborn
-Note: The volatility_model.joblib file must be in the same directory.
+Our model achieved:  
+\[
+R^2 = 0.9471
+\]  
+➡️ Explains **94% of the volatility**.
 
-Run the App
-Execute the following command in your terminal:
+---
 
-Bash
+## 📂 Project Structure
 
-streamlit run app.py
-Your browser will automatically open a new tab with the dashboard.
-
-Skills Demonstrated
-This project showcases a range of skills critical for a data science role, including:
-
-Programming: Python
-
-Libraries: Pandas, NumPy, Scikit-Learn, XGBoost, Streamlit, Matplotlib, Seaborn, Yfinance
-
-Methodology: Time-Series Analysis, Machine Learning, Regression, Hyperparameter Tuning, Backtesting, Model Evaluation, Data Visualization, and Deployment.
