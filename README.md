@@ -113,7 +113,7 @@ Our model achieved a **robust average \( R^2 = 0.9492 \)** from backtesting.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 AI-Volatility-Predictor-A-Financial-Risk-Analytics-Dashboard/
