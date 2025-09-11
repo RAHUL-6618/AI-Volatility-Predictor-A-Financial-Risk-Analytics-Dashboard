@@ -96,23 +96,16 @@ AI-Volatility-Predictor-A-Financial-Risk-Analytics-Dashboard/
 
 ---
 
-##  How to Run the App
+## How to Run the App
 
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/RAHUL-6618/AI-Volatility-Predictor-A-Financial-Risk-Analytics-Dashboard.git
 cd AI-Volatility-Predictor-A-Financial-Risk-Analytics-Dashboard
 
+
 ### 2. Install Dependencies
+Make sure you have **Python 3.8+** installed. Then, install the required libraries:
 
-Make sure you have Python 3.8+ installed. Then, install dependencies:
-'''bash
+```bash
 pip install pandas yfinance joblib numpy scikit-learn xgboost streamlit matplotlib seaborn
-
-Ensure volatility_model.joblib is in the same directory.
-### 3. Run the App
-'''bash
-streamlit run app.py
-
-
-Your browser will automatically open the dashboard.
