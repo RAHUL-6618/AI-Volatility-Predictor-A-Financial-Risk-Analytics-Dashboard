@@ -44,7 +44,8 @@ r_t = ln \left(\frac{P_t}{P_{t-1}}\right)
 ```
 Where:  
 ```math
-- ( P_t ) = Price on day *t
+P_t = \text{Price on day } t
+
 ```
 ---
 
