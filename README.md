@@ -36,29 +36,29 @@ The model works by identifying patterns in historical data. Several features wer
 
 ### 1. Logarithmic Returns
 ```math
-Daily log returns \( r_t \):
+Daily log returns ( r_t ):
 
-\[
-r_t = \ln \left(\frac{P_t}{P_{t-1}}\right)
-\]
+[
+r_t = ln \left(\frac{P_t}{P_{t-1}}\right)
+]
 ```
 Where:  
 ```math
-- \( P_t \) = Price on day *t*
+- ( P_t ) = Price on day *t*
 ```
 ---
 
 ### 2. Historical Volatility
 The target variable is **annualized historical volatility** \( \sigma_P \):
 ```math
-\[
+[
 \sigma_P = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (r_i - \bar{r})^2} \times \sqrt{252}
-\]
+]
 ```
 Where:  
 ```math
-- \( n = 21 \) (rolling window in days)  
-- \( \bar{r} \) = Mean daily log return  
+- ( n = 21 ) (rolling window in days)  
+- ( \bar{r} ) = Mean daily log return  
 - 252 ≈ trading days in a year  
 ```
 ---
@@ -66,15 +66,15 @@ Where:
 ### 3. Relative Strength Index (RSI)
 Momentum oscillator used to measure the speed & change of price movements:
 ```math
-\[
+[
 RSI = 100 - \frac{100}{1 + RS}
-\]
+]
 ```
 Where:
 ```math
-\[
+[
 RS = \frac{\text{Average Gain}}{\text{Average Loss}}
-\]
+]
 ```
 ---
 
@@ -82,15 +82,15 @@ RS = \frac{\text{Average Gain}}{\text{Average Loss}}
 
 We evaluated the model using **R-squared (\(R^2\))**, which measures how much of the variance in the target variable is predictable from the features.
 ```math
-\[
+[
 R^2 = 1 - \frac{\sum_i (y_i - \hat{y}_i)^2}{\sum_i (y_i - \bar{y})^2}
-\]
+]
 ```
 Where:  
 ```math
-- \( y_i \) = Actual volatility  
-- \( \hat{y}_i \) = Predicted volatility  
-- \( \bar{y} \) = Mean actual volatility  
+- ( y_i ) = Actual volatility  
+- ( \hat{y}_i ) = Predicted volatility  
+- ( \bar{y} ) = Mean actual volatility  
 ```
 ---
 
@@ -102,15 +102,15 @@ For each split \( k \in \{1, …, K\} \):
 
 - **Train**:
 ```math 
-\[
-D^{train}_k = \{(x_t, y_t) \mid t \in [T_0, T_k]\}
-\]
+[
+D^{train}_k = {(x_t, y_t) \mid t \in [T_0, T_k]}
+]
 ```
 - **Test**:
 ```math
-\[
-D^{test}_k = \{(x_t, y_t) \mid t \in [T_k, T'_k]\}
-\]
+[
+D^{test}_k = {(x_t, y_t) \mid t \in [T_k, T'_k]}
+]
 ```
 This process yields a series of performance scores.  
 Our model achieved a **robust average \( R^2 = 0.9492 \)** from backtesting.
