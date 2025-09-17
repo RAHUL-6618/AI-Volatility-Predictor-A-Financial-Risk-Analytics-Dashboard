@@ -124,10 +124,10 @@ Our model achieved a **robust average \( R^2 = 0.9492 \)** from backtesting.
 
 ```text
 AI-Volatility-Predictor-A-Financial-Risk-Analytics-Dashboard/
-│── app.py                  # Streamlit interactive dashboard
+│── app.py                  # Streamlit interactive dashboard [ test_project_3.py ]
 │── volatility_model.joblib # Saved ML model
 │── README.md               # Project overview
-|── Tarin.ipynb             # Model Training and Evaluating 
+|── Tarin.ipynb             # Model Training and Evaluating [ Project_3.ipynb ]
 ```
 
 ---
