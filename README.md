@@ -99,7 +99,7 @@ Where:
 Unlike a single train/test split, **backtesting** simulates how the model would have performed over multiple rolling periods in the past.  
 This is represented mathematically as a sequence of train/test splits that "walk forward" in time.
 
-For each split \( k \in \{1, …, K\} \):
+For each split \( k in \{1, …, K\} \):
 
 - **Train**:
 ```math 
